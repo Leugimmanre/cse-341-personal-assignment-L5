@@ -1,50 +1,46 @@
 
 // Testing request all contacts
-GET http://localhost:4000/contacts
+GET http://localhost:4000/students
 ###
 
 // Testing request single contact
-
-GET http://localhost:4000/contact/644d63117361f3bbfcdb9cbd
+GET http://localhost:4000/student/644fd7e8fe2df9ce30c994f4
 ###
 
 // Testing request create new contact
-
-POST http://localhost:4000/new-contact
+POST http://localhost:4000/new-student
 content-type: application/json
 
 {
-    "firstname": "Andres",
-    "lastname": "Martinez",
+    "firstName": "Andres",
+    "lastName": "Martinez",
     "age": "20",
     "phone": "456123789",
     "email": "pepiamila@camila.com",
     "address": "C/c n2",
-    "favoriteColor": "Yellow",
-    "birthday": "2002"
+    "degree": "Machanic",
+    "university": "BYU IDAHO"
 }
 ###
 
 // Testing request update contact
-
-PUT http://localhost:4000/update-contact/644d822d3897d90c7afc47f0
+PUT http://localhost:4000/update-student/644ff3efd4188ed577cda91e
 content-type: application/json
 
 {
-    "firstname": "Andres ",
-    "lastname": "Pendejo",
+    "firstName": "Andres ",
+    "lastName": "Pendejo",
     "age": "20",
     "phone": "456123789",
-    "email": "andres@andres.com",
+    "email": "andres@andres2.com",
     "address": "C/c n2",
-    "favoriteColor": "Yellow",
-    "birthday": "2002"
+    "degree": "PSYCHOLOGY",
+    "university": "BYU IDAHO"
 }
 ###
 
 // Testing request update contact
-
-DELETE http://localhost:4000/delete-contact/644d81e33897d90c7afc47ee
+DELETE http://localhost:4000/delete-student/644ff3efd4188ed577cda91e
 
 
 

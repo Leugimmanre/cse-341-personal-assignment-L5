@@ -1,6 +1,6 @@
 const Profile = require('../models/profile.js');
 
-// Get all contacts
+// Get all Profiles
 const students = async (request, response) => {
 
     const data = await Profile.find({});
@@ -8,21 +8,21 @@ const students = async (request, response) => {
 
 }
 
-// Get a single contact
+// Get a single profile
 const singleStudent = async (request, response) => {
     const id = request.params['id'];
 
-    const data = await Contacts.findOne({_id:id});
+    const data = await Profile.findOne({_id:id});
     response.send(data);
 
 }
 
-// Create contact
+// Create profile
 const createStudent = async (request, response) => {
     const { firstName, lastName, email, age, phone, address, degree, university } = request.body;
 
     try {
-        const contact = new Profile( {
+        const profile = new Profile( {
             firstName,
             lastName,
             age,
@@ -32,24 +32,24 @@ const createStudent = async (request, response) => {
             degree,
             university,
         });
-        await contact.save();
-        return response.status(201).json(contact.id);
+        await profile.save();
+        return response.status(201).json(profile.id);
 
     } catch (error) {
         console.log(error);
     }
 }
 
-// Update contact
+// Update profile
 const updateStudent = async (request, response) => {
     const { firstName, lastName, email, age, phone, address, degree, university } = request.body;
     const id = request.params["id"];
 
-    const data = await Contacts.findOne({_id:id});
+    const data = await Profile.findOne({_id:id});
 
     if (data) {
         try {
-            await Contacts.replaceOne({_id:data.id}, {
+            await Profile.replaceOne({_id:data.id}, {
                 firstName,
                 lastName,
                 age,
@@ -69,15 +69,15 @@ const updateStudent = async (request, response) => {
 
 }
 
-// Delete contact
+// Delete profile
 const deleteStudent = async (request, response) => {
     const id = request.params['id'];
-    await Contacts.findOneAndDelete({ _id: id })
-    .then(deletedContact => {
-      if (!deletedContact) {
-        return response.status(404).json({ error: 'Contact not found' });
+    await Profile.findOneAndDelete({ _id: id })
+    .then(deletedprofile => {
+      if (!deletedprofile) {
+        return response.status(404).json({ error: 'profile not found' });
       }
-      response.status(200).json({ message: 'Contact deleted successfully' });
+      response.status(200).json({ message: 'profile deleted successfully' });
     })
     .catch(error => {
         response.status(500).json({ error: error.message });

@@ -1,11 +1,11 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Lesson 4: API Documentation",
+    "title": "Lección 5: Alternativas REST y JSON",
     "description": "Contacts API",
     "version": "1.0.0"
   },
-  "host": "lesson-2-personal-assignment.onrender.com",
+  "host": "localhost:4000",
   "basePath": "/",
   "schemes": ["https"],
   "paths": {
@@ -16,23 +16,16 @@
         "responses": {}
       }
     },
-    "/": {
-      "get": {
-        "description": "",
-        "parameters": [],
-        "responses": {}
-      }
-    },
-    "/contacts/": {
+    "/students/": {
       "get": {
         "description": "All contacts are retrieved",
         "parameters": [],
         "responses": {}
       }
     },
-    "/contact/{id}": {
+    "/student/{id}": {
       "get": {
-        "description": "A single contact sending the ID example: 644d63117361f3bbfcdb9cbd",
+        "description": "A single profile sending the ID example: 644fd7e8fe2df9ce30c994f7",
         "parameters": [
           {
             "name": "id",
@@ -44,7 +37,7 @@
         "responses": {}
       }
     },
-    "/new-contact/": {
+    "/new-student/": {
       "post": {
         "description": "Add new contact to database",
         "produces": ["application/json"],
@@ -56,10 +49,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstname": {
+                "firstName": {
                   "example": "any"
                 },
-                "lastname": {
+                "lastName": {
                   "example": "any"
                 },
                 "age": {
@@ -74,10 +67,10 @@
                 "address": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "degree": {
                   "example": "any"
                 },
-                "birthday": {
+                "university": {
                   "example": "any"
                 }
               }
@@ -94,7 +87,7 @@
         }
       }
     },
-    "/update-contact/{id}": {
+    "/update-student/{id}": {
       "put": {
         "description": "Update an existing contact in our database",
         "produces": ["application/json"],
@@ -111,10 +104,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstname": {
+                "firstName": {
                   "example": "any"
                 },
-                "lastname": {
+                "lastName": {
                   "example": "any"
                 },
                 "age": {
@@ -129,10 +122,10 @@
                 "address": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "degree": {
                   "example": "any"
                 },
-                "birthday": {
+                "university": {
                   "example": "any"
                 }
               }
@@ -149,7 +142,7 @@
         }
       }
     },
-    "/delete-contact/{id}": {
+    "/delete-student/{id}": {
       "delete": {
         "description": "",
         "parameters": [
