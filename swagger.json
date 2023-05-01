@@ -5,7 +5,7 @@
     "description": "Contacts API",
     "version": "1.0.0"
   },
-  "host": "leccion-5-alternativas-rest-y-json-4dcp.onrender",
+  "host": "leccion-5-alternativas-rest-y-json-4dcp.onrender.com",
   "basePath": "/",
   "schemes": ["https"],
   "paths": {
