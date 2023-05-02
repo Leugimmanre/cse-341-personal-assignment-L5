@@ -1,6 +1,12 @@
 const Profile = require('../models/profile.js');
 
 // Get all Profiles
+const home = async (request, response) => {
+    response.send('Welcome Home');
+
+}
+
+// Get all Profiles
 const students = async (request, response) => {
 
     const data = await Profile.find({});
@@ -85,6 +91,7 @@ const deleteStudent = async (request, response) => {
 }
 
 module.exports = {
+    home,
     students,
     singleStudent,
     createStudent,
