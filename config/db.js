@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const urlURI = process.env.MONGO_URI;
-const urlPORT = process.env.PORT;
+const urlPORT = process.env.PORT2;
 
 const connectDB = async () => {
     try {

@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Lección 5: Alternativas REST y JSON",
-    "description": "Contacts API",
+    "description": "Profiles API",
     "version": "1.0.0"
   },
   "host": "leccion-5-alternativas-rest-y-json-4dcp.onrender.com",
@@ -18,7 +18,7 @@
     },
     "/students/": {
       "get": {
-        "description": "All contacts are retrieved",
+        "description": "All profiles are retrieved",
         "parameters": [],
         "responses": {}
       }
@@ -39,7 +39,7 @@
     },
     "/new-student/": {
       "post": {
-        "description": "Add new contact to database",
+        "description": "Add new profile to database",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -89,7 +89,7 @@
     },
     "/update-student/{id}": {
       "put": {
-        "description": "Update an existing contact in our database",
+        "description": "Update an existing profile in our database",
         "produces": ["application/json"],
         "parameters": [
           {
