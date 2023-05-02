@@ -1,11 +1,11 @@
-const express = require('express');
-const routes = require('./routes/routes.js');
-const dotenv = require('dotenv');
-const cors = require('cors');
+const express = require("express");
+const routes = require("./routes/routes.js");
+// const dotenv = require("dotenv");
+require('dotenv').config();
+const cors = require("cors");
 const connectDB = require("./config/db.js");
 
-
-dotenv.config();
+// dotenv.config();
 connectDB();
 
 const PORT = process.env.PORT2 || 4000;
@@ -18,4 +18,3 @@ app.use(routes);
 app.listen(PORT, () => {
   console.log(`Server running on port: ${PORT}`);
 });
-
