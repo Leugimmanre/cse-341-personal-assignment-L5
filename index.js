@@ -1,11 +1,10 @@
 const express = require("express");
 const routes = require("./routes/routes.js");
-// const dotenv = require("dotenv");
+
 require('dotenv').config();
 const cors = require("cors");
 const connectDB = require("./config/db.js");
 
-// dotenv.config();
 connectDB();
 
 const PORT = process.env.PORT2 || 4000;
